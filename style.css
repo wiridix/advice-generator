@@ -1,0 +1,107 @@
+:root {
+    /* ### Primary */
+
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    /* ### Neutral */
+
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+
+    --fontSize: 2.8rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--DarkBlue);
+    height: 100vh;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--DarkGrayishBlue);
+    margin: 0 5%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+.card-title-id,
+.card-title-id span {
+    color: var(--NeonGreen);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 20px 0;
+    letter-spacing: 5px;
+}
+
+.card-quote {
+    color: var(--LightCyan);
+    font-size: var(--fontSize);
+    margin: 30px 0;
+}
+
+.card-img-mobile {
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.card-img-desktop {
+    display: none;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.card-btn {
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--NeonGreen);
+    background-image: url("./images/icon-dice.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transform: translateY(-15%) translateX(-50%);
+    left: 50%;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    transition: all ease-in-out 0.3s;
+}
+
+@media (min-width: 640px) {
+    .card {
+        width: 45%;
+        padding: 50px;
+    }
+    .card-title-id,
+    .card-title-id span {
+        margin: 0;
+    }
+    .card-img-mobile {
+        display: none;
+    }
+
+    .card-img-desktop {
+        display: block;
+        margin-bottom: 2rem;
+    }
+
+    .card-btn {
+        transform: translateY(30%) translateX(-50%);
+    }
+
+    .card-btn:hover {
+        box-shadow: 0px 0px 20px 2px var(--NeonGreen);
+    }
+}
