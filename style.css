@@ -81,7 +81,7 @@ body {
 
 @media (min-width: 640px) {
     .card {
-        width: 45%;
+        width: 30%;
         padding: 50px;
     }
     .card-title-id,
